@@ -65,7 +65,7 @@ Option 1: Clone via Git
 
    ```bash
    python main.py
-   ```
+````
 Option 2: Run through an IDE
 
 Download the project as a ZIP and extract it.
