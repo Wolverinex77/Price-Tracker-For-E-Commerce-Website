@@ -46,7 +46,7 @@ This allows the program to fetch product data even if it’s run outside Pakista
 - requests  
 - beautifulsoup4  
 - rich  
-
+- lxml
 ---
 
 ## How to Run
