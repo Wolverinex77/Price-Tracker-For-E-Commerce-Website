@@ -1,8 +1,6 @@
-
-````markdown
 # CS50 Final Project – PriceOye Product Tracker
 
-#### Video Demo:https://youtu.be/z-EEepP9CvI
+#### Video Demo: [https://youtu.be/z-EEepP9CvI](https://youtu.be/z-EEepP9CvI)
 
 #### Description:
 
@@ -46,37 +44,42 @@ This allows the program to fetch product data even if it’s run outside Pakista
 - requests  
 - beautifulsoup4  
 - rich  
-- lxml
+- lxml  
+
 ---
 
-How to Run
+## How to Run
 
 You can run the program in two ways:
 
-Option 1: Clone via Git
+### Option 1: Clone via Git
 
 1. Make sure you have Python 3 installed.  
-2. Install the required libraries:  
+2. Clone the repository:  
    ```bash
+   git clone https://github.com/Wolverinex77/Price-Tracker-For-E-Commerce-Website.git
+   cd Price-Tracker-For-E-Commerce-Website
+
+3. Install the required libraries:
+
    pip install -r requirements.txt
-```
 
-3. Start the program by running:
-
-   ```bash
+4. Run the program:
    python main.py
-````
-Option 2: Run through an IDE
 
-Download the project as a ZIP and extract it.
 
-Open the folder in an IDE like VS Code or PyCharm.
+### Option 2: Run via IDE
 
-Install dependencies (pip install -r requirements.txt).
+1. Download or clone the repository.
 
-Run main.py
+2. Open the folder in your IDE (PyCharm, VS Code, Thonny).
 
----
+3. Install the requirements.
+   pip install -r requirements.txt
+   
+4. Run main.py directly from the IDE.
+
+
 
 ## File Overview
 
