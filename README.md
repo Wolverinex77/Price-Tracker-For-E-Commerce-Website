@@ -59,7 +59,7 @@ Option 1: Clone via Git
 2. Install the required libraries:  
    ```bash
    pip install -r requirements.txt
-````
+```
 
 3. Start the program by running:
 
