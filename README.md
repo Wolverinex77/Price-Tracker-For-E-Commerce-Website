@@ -49,7 +49,11 @@ This allows the program to fetch product data even if it’s run outside Pakista
 - lxml
 ---
 
-## How to Run
+How to Run
+
+You can run the program in two ways:
+
+Option 1: Clone via Git
 
 1. Make sure you have Python 3 installed.  
 2. Install the required libraries:  
@@ -62,6 +66,15 @@ This allows the program to fetch product data even if it’s run outside Pakista
    ```bash
    python main.py
    ```
+Option 2: Run through an IDE
+
+Download the project as a ZIP and extract it.
+
+Open the folder in an IDE like VS Code or PyCharm.
+
+Install dependencies (pip install -r requirements.txt).
+
+Run main.py
 
 ---
 
