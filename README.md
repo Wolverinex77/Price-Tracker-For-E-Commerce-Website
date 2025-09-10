@@ -62,11 +62,11 @@ You can run the program in two ways:
 
 3. Install the required libraries:
    ```bash
-      pip install -r requirements.txt
+pip install -r requirements.txt
 
 4. Run the program:
    ```bash
-      python main.py
+python main.py
 
 
 ### Option 2: Run via IDE
@@ -77,7 +77,7 @@ You can run the program in two ways:
 
 3. Install the requirements.
    ```bash
-      pip install -r requirements.txt
+pip install -r requirements.txt
    
 4. Run main.py directly from the IDE.
 
