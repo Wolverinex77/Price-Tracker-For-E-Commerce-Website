@@ -61,11 +61,12 @@ You can run the program in two ways:
    cd Price-Tracker-For-E-Commerce-Website
 
 3. Install the required libraries:
-
-   pip install -r requirements.txt
+   ```bash
+      pip install -r requirements.txt
 
 4. Run the program:
-   python main.py
+   ```bash
+      python main.py
 
 
 ### Option 2: Run via IDE
@@ -75,7 +76,8 @@ You can run the program in two ways:
 2. Open the folder in your IDE (PyCharm, VS Code, Thonny).
 
 3. Install the requirements.
-   pip install -r requirements.txt
+   ```bash
+      pip install -r requirements.txt
    
 4. Run main.py directly from the IDE.
 
