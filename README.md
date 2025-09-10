@@ -2,6 +2,10 @@
 ````markdown
 # CS50 Final Project – PriceOye Product Tracker
 
+#### Video Demo:https://youtu.be/z-EEepP9CvI
+
+#### Description:
+
 ## Introduction
 
 This is my final project for **CS50’s Introduction to Programming with Python**.  
