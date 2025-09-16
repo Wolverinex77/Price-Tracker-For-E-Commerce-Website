@@ -1,17 +1,13 @@
 import re
+from utils import filter_instock, sort_items
 from urllib.parse import quote
-from utilis import filter_instock
-from utilis import sort_items
-from display import show_category_navigation_menu
-from display import show_sort_menu
-from display import display_items
-from display import display_categories
-from display import display_brands
-from product_catalog import product_brands,my_categories
-from scraper import handle_request
-from scraper import scrape_category_product_data
+from display import show_category_navigation_menu, show_sort_menu, display_items, display_categories, display_brands
+from product_catalog import product_brands, my_categories
+from scraper_utils import handle_request,scrape_category_product_data
 
 def refresh_items(url,page):
+    #This works
+
     response=handle_request(url)
     product_data=scrape_category_product_data(response,url)
     display_items(product_data,page)
@@ -42,7 +38,7 @@ def select_category(my_categories):
     
 
 def build_product_url(category_name,page):
-    category_slug = category_name.replace(" ", "-")
+    category_slug = category_name.replace(" ", "-").lower()
     
     if category_slug.lower() == "tv-&-home-appliances":
             
@@ -54,7 +50,7 @@ def build_product_url(category_name,page):
     return url,category_slug
 
 
-def brands(brand_list,page,category_slug,category_name):
+def select_brands(brand_list,page,category_slug,category_name):
     while True:
         try:
 
@@ -79,9 +75,10 @@ def brands(brand_list,page,category_slug,category_name):
             continue
 
 
-def categories():
-    page=1
-
+def get_categories():
+    MIN_PAGE=1
+    MAX_PAGE=26
+    page=MIN_PAGE
     category_name=select_category(my_categories)
     if category_name == "BACK":
         return
@@ -94,23 +91,23 @@ def categories():
     
         if choice=="1":
                 #Next Page
-                if page<26:
+                if page<MAX_PAGE:
                         page+=1
-                        items=refresh_items(url,page)
+                        product_data=refresh_items(url,page)
                 else:
                         print("❗ Limit Exceeded")
         elif choice == "2":
                 # Previous Page
-                if page>1:
+                if page>MIN_PAGE:
                     page-=1
-                    items=refresh_items(url,page)
+                    product_data=refresh_items(url,page)
                 else:
                     print("❗ Already at the first page.")
         elif choice=="3":
             #filter brands.
             brands_list=display_brands(product_brands,category_name)
 
-            brand_choice=brands(brands_list,page,category_slug,category_name)
+            brand_choice=select_brands(brands_list,page,category_slug,category_name)
             if brand_choice == "BACK":
                 continue
              # return to the nav menu
@@ -126,12 +123,12 @@ def categories():
                 choice=show_sort_menu()
                 if choice=="1":
                     print("Sorting from Low to High...")
-                    asc_sorted_items=sort_items(items,order="asc")
+                    asc_sorted_items=sort_items(product_data,order="asc")
                     display_items(asc_sorted_items,page)
 
                 elif choice=="2":
                     print("Sorting From High to Low...")
-                    dec_sorted_items=sort_items(items,order="dec")
+                    dec_sorted_items=sort_items(product_data,order="dec")
                     display_items(dec_sorted_items,page)
 
                 elif choice=="3":
@@ -139,7 +136,7 @@ def categories():
                     show_category_navigation_menu()
 
         elif choice=="6":
-            return categories() 
+            return get_categories() 
             
         elif choice=="7":
             return 

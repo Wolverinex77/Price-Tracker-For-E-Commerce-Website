@@ -1,11 +1,11 @@
-from utilis import sort_items
-from utilis import filter_instock
+from scraper_utils import handle_request, scrape_search_product_data
+from utils import sort_items
+from utils import filter_instock
 from display import show_search_navigation_menu
 from urllib.parse import quote_plus
 from display import display_items
 from display import show_sort_menu
-from scraper import handle_request
-from scraper import scrape_search_product_data
+
 def refresh_items(product_name,page):
     url=built_product_url(product_name,page)
     response=handle_request(url)
@@ -23,9 +23,9 @@ def built_product_url(user_input,page):
     print(url)
     return url
 
-def search():
+def search_data():
             page=1
-            MAX_LIMIT=36
+            MAX_LIMIT=10
             MIN_LIMIT=1
             product_name=input("🔍 Enter product to search: ").strip().lower()
 
@@ -70,7 +70,7 @@ def search():
 
                 elif choice == "5":
                     #change products
-                    search()
+                    search_data()
                 
                 elif choice == "6":
                     # Quit

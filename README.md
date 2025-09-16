@@ -12,7 +12,7 @@ It’s a **Product Catalog & Price Tracker** that scrapes product information fr
 ### Users can:
 - Search for products by keyword  
 - Browse items by category  
-- (Coming soon) Receive product info via email  
+- Get Email on Products Discounts.
 - Exit the program  
 
 I chose this project because I’m interested in automation and scripting. I wanted to explore how Python can be used to scrape and process real-world data, while also building something practical. With this program, users can enter any product and instantly get real-time data about it.  
@@ -29,7 +29,7 @@ Data is scraped in real time using **`requests` + `BeautifulSoup`**.
 ### Main Features
 - **Search for products** – find items by keyword  
 - **Browse categories** – explore products grouped into categories/brands  
-- **Future Email Support** – send product info via email  
+- **Future Email Support** – send product on latest product discount based on the category.
 - **Exit** – closes the program  
 
 ### Proxy for Geo-Restrictions
@@ -44,7 +44,7 @@ This allows the program to fetch product data even if it’s run outside Pakista
 - requests  
 - beautifulsoup4  
 - rich  
-- lxml  
+- lxml
 
 ---
 
@@ -91,7 +91,7 @@ You can run the program in two ways:
 * `categories.py` – handles product categories
 * `search.py` – implements the search function
 * `display.py` – displays the menu and product information
-* `mail.py` – placeholder for future email feature
+* `mail.py` – sends email on latest product disounts to the user
 * `utils.py` – helper functions used throughout the project
 * `requirements.txt` – list of Python libraries
 
@@ -123,10 +123,9 @@ This project took me **over a month** to complete, because I had to keep testing
 
 ## Future Improvements
 
-* **Email support**: Expand `mail.py` so users can receive product data via email
-* **More sites**: Add scraping from multiple e-commerce platforms
-* **CSV Export**: Save and track historical data
-* **GUI**: Add a graphical user interface for non-technical users
+* **More sites**: Add scraping from multiple e-commerce platforms.
+* **CSV Export**: Save all the scraped data in a CSV file.
+* **GUI**: Add a graphical user interface for non-technical users.
 
 ---
 

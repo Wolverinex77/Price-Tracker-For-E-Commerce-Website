@@ -1,30 +1,30 @@
-from search import search
-from categories import categories
+from search import search_data
 from display import show_main_menu
+from mail import mail
+from categories import get_categories
 
 def main():
     while True:
         user_input=show_main_menu()
 
         if user_input=="1":
-            search()
-        
+            search_data()
+         
         elif user_input=="2":
-            categories()
+            get_categories()
             
         elif user_input=="3":
-            #send email
-            print("To be done in the future 😊 ")
+            mail()
             
             
         elif user_input=="4":
-                print("Good bye 😊")
-                exit()
+            print("Good bye 😊")
+            exit()
     
         
         
 if __name__ == "__main__":
-            main()
+    main()
 
 
 

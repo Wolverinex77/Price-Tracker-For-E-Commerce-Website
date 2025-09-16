@@ -115,10 +115,10 @@ def display_items(my_items,page,MAX_LIMIT=36):
         console.print(f"[bold red]❌ No results found ! ")
         
     for index, item in enumerate(my_items, start=1):
-        console.print(f"🛒 [bold white]Title[/]: {index}. {item['Title']}")
-        console.print(f"💰 [bold green]Price[/]: {item['Price']}")
-        console.print(f"🔗 [blue underline]Link[/]: {item['Link']}")
-        console.print(f"📦 [bold white]Stock[/]: {item['Status']}")
+        console.print(f"🛒 [bold white]Title[/]: {index}. {item["Title"]}")
+        console.print(f"💰 [bold green]Price[/]: {item["Price"]}")
+        console.print(f"🔗 [blue underline]Link[/]: {item["Link"]}")
+        console.print(f"📦 [bold white]Stock[/]: {item["Status"]}")
         console.print("-" * 60)  # separator between items
 
 def display_categories(my_categories):
