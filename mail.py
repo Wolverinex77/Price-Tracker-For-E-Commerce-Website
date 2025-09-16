@@ -1,11 +1,16 @@
 import smtplib
 from email.mime.text import MIMEText
-from config import EMAIL, APP_PASSWORD
+import os
+from dotenv import load_dotenv
 from scraper import scrape_full_category
 import validators
+load_dotenv()
 
 
 # Gmail credentials
+EMAIL = os.getenv("EMAIL")
+APP_PASSWORD = os.getenv("APP_PASSWORD")
+
 
 def mail():
     email=input("Enter your email: ").strip()
@@ -15,6 +20,10 @@ def mail():
     else:
         print("Invalid Email.")
         return #Returns to Main
+    if not EMAIL or not APP_PASSWORD:
+        print("Error: Environment variables for email are not set.")
+        return
+    
     all_prod_data,category_name = scrape_full_category()
     if category_name=="BACK":
         return
