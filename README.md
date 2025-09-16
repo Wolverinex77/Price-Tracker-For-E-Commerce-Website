@@ -58,6 +58,7 @@ This project uses environment variables to store sensitive information (your ema
 2.To use the email feature, create a local .env file from this template:
 ```bash
    copy config.env .env
+```
 
 3.Open .env and replace the placeholders with your own credentials:
 EMAIL=your_email@gmail.com
