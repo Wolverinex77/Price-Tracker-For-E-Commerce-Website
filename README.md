@@ -45,8 +45,25 @@ This allows the program to fetch product data even if it’s run outside Pakista
 - beautifulsoup4  
 - rich  
 - lxml
+- validators
+- python-dotenv
 
 ---
+## Environment Variables
+
+This project uses environment variables to store sensitive information (your email and app password) securely.
+
+1.There is a template file called config.env in the repository.
+
+2.To use the email feature, create a local .env file from this template:
+```bash
+   copy config.env .env
+
+3.Open .env and replace the placeholders with your own credentials:
+EMAIL=your_email@gmail.com
+APP_PASSWORD=your_app_password
+
+
 
 ## How to Run
 
@@ -86,7 +103,8 @@ You can run the program in two ways:
 ## File Overview
 
 * `main.py` – entry point; shows the main menu and runs the program
-* `scraper.py` – fetches product data from websites
+* `scraper_utils.py` – handles requests and scrapes product data for both search results and categories from websites
+* `scraper.py`-scrapes complete category product data by sending requests across multiple pages
 * `product_catalog.py` – manages product information
 * `categories.py` – handles product categories
 * `search.py` – implements the search function
@@ -94,6 +112,7 @@ You can run the program in two ways:
 * `mail.py` – sends email on latest product disounts to the user
 * `utils.py` – helper functions used throughout the project
 * `requirements.txt` – list of Python libraries
+* `config.py.example` - template file for users to add their own credentials
 
 ---
 
