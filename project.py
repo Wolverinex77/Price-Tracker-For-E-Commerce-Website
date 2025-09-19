@@ -5,14 +5,20 @@ from categories import get_categories
 
 
 def run_search():
+    """Handle the search option."""
+    print("Running search...")
     search_data()
 
 
 def run_categories():
+    """Handle categories option."""
+    print("Fetching categories...")
     get_categories()
 
 
 def run_mail():
+    """Handle mailing option."""
+    print("Sending mail...")
     mail()
 
 
